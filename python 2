@@ -1,0 +1,29 @@
+nama = input("Masukkan nama mahasiswa: ")
+nim = input("Masukkan NIM: ")
+
+nilai_tugas = float(input("Masukkan nilai tugas: "))
+nilai_uts = float(input("Masukkan nilai UTS: "))
+nilai_uas = float(input("Masukkan nilai UAS: "))
+
+# Validasi nilai mahasiswa
+if not all(0 <= nilai <= 100 for nilai in [nilai_tugas, nilai_uts, nilai_uas]):
+    print("Error: Nilai harus berada di antara 0 sampai 100.")
+else:
+    # Menghitung nilai akhir
+    nilai_akhir = (
+        nilai_tugas * 0.3
+        + nilai_uts * 0.3
+        + nilai_uas * 0.4
+    )
+
+    # Menampilkan hasil
+    print("\n=== HASIL NILAI MAHASISWA ===")
+    print("Nama:", nama)
+    print("NIM:", nim)
+    print("Nilai akhir:", round(nilai_akhir, 2))
+
+    # Menentukan status kelulusan
+    if nilai_akhir >= 60:
+        print("Status: LULUS")
+    else:
+        print("Status: TIDAK LULUS")
