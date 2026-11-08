@@ -1,0 +1,11 @@
+a = int(input("masukin angka a:"))
+b = int(input("masukin angka b:"))
+
+print(a, "+", b, "=", a + b)
+print(a, "-", b, "=", a - b)
+print(a, "*", b, "=", a * b)
+print(a, "/", b, "=", a / b)
+print(a, "%", b, "=", a % b)
+
+print(a, ">", b, "=" a > b)
+print(a, "==", b, "=" a == b)
